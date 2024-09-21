@@ -1,0 +1,42 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  overflow: hidden; /* Prevent scrollbars on the body */
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative; /* Allows absolute positioning of the background */
+}
+
+.bg {
+  position: absolute; /* Ensure background is behind the content */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  filter: blur(4px); /* Optional: blur effect for the background */
+  background-position: unset;
+  background-size: contain;
+  /* filter: grayscale(30%); */
+  filter: brightness(70%);
+}
+
+.centered-text {
+  color: white; /* Text color */
+  text-align: center; /* Center the text */
+  font-size: 4rem; /* Adjust size as needed */
+  font-weight: bold;
+  z-index: 1; /* Bring text above the background */
+}
+
+.weather-icon {
+  display: block; /* Center the weather icon */
+  margin: 0 auto; /* Center the icon */
+  width: 80px; /* Adjust icon size as needed */
+  height: auto; /* Maintain aspect ratio */
+}
